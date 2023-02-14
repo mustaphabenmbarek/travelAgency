@@ -1,52 +1,55 @@
 <div class="container">
-    <h1>Inscription</h1>
+  <h1>Inscription</h1>
 
-    <form class="col-4">
+  <form class="col-4">
     <div class="mb-3">
-        <label for="firstname" class="form-label">Prénom</label>
-        <input
+      <label for="firstname" class="form-label">Prénom</label>
+      <input
         id="firstnameInput"
         type="text"
         class="form-control"
         placeholder="Prénom"
         aria-label="firstname"
-        />
+      />
     </div>
     <div class="mb-3">
-        <label for="lastname" class="form-label">Nom</label>
-        <input
+      <label for="lastname" class="form-label">Nom</label>
+      <input
         id="lastnameInput"
         type="text"
         class="form-control"
         placeholder="Nom"
         aria-label="lastname"
-        />
+      />
     </div>
     <div class="mb-3">
-        <label for="email" class="form-label">Email</label>
-        <input
+      <label for="email" class="form-label">Email</label>
+      <input
         id="emailInput"
         type="email"
         class="form-control"
         placeholder="email"
         aria-label="email"
-        />
+      />
     </div>
 
     <div class="mb-3">
-        <label for="password" class="form-label">Mot de passe</label>
-        <input
+      <label for="password" class="form-label">Mot de passe</label>
+      <input
         id="passwordInput"
         type="password"
         class="form-control"
         placeholder="mot de passe"
         aria-label="password"
-        />
+      />
     </div>
     <div class="mb-3" class="text-center">
-        <button type="submit" class="btn btn-primary">s'incrire</button>
+      <button type="submit" class="btn btn-primary">s'incrire</button>
     </div>
-
-    </form>
+    <div class="text-center mt-3">
+        <p>Déjà inscrit?
+            <a routerLink="connexion" class="link-info">Connectez-vous</a>
+        </p>
+    </div>
+  </form>
 </div>
-
