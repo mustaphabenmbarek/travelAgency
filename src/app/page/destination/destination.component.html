@@ -1,0 +1,18 @@
+<div class="container mt-4">
+
+    <h1>Destination</h1>
+
+    <div class="row mb-4">
+        <div class="col-9">
+            <input type="text" class="form-control" [(ngModel)]="currentSearch" placeholder="Paris" />
+        </div>
+        <div class="col-3">
+            <button class="btn btn-primary" (click)="onAddTravelClick()">Ajouter</button>
+        </div>
+    </div>
+
+    <div *ngFor="let destination of destinations">
+        {{destination.name}} - {{destination.maxAcceptedTravelers}}
+    </div>
+
+</div>
