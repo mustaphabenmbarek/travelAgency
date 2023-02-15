@@ -6,20 +6,23 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { InscriptionComponent } from './pages/inscription/inscription.component';
 import { ConnexionComponent } from './pages/connexion/connexion.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ResetComponent } from './pages/reset/reset.component';
 // import { HttpClientModules } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     InscriptionComponent,
-    ConnexionComponent
+    ConnexionComponent,
+    ResetComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     FormsModule, 
+    ReactiveFormsModule
     // HttpClientModules
   ],
   providers: [],

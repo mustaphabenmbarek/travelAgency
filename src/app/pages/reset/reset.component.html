@@ -1,16 +1,16 @@
 <div class="container">
-    <h1>CONNEXION</h1>
-    <form class="col-4" [formGroup]="connexionForm" (ngSubmit)="onSubmit()">
+    <h1>REINITIALISER MOT DE PASSE</h1>
+    <form class="col-4" [formGroup]="resetForm" (ngSubmit)="onSubmit()">
         <div class="mb-3">
-            <label for="emailInput" class="form-label">email</label>
+            <label for="passwordInput" class="form-label">Mot de passe</label>
             <input 
-                type="email" 
-                id="emailInput" 
-                placeholder="monemail@domaine.com " 
+                type="password" 
+                id="passwordInput"  
+                placeholder="Mot de passe" 
                 class="form-control" 
-                aria-label="email"
-                name="email"
-                formControlName="email"
+                aria-label="password"
+                name="password1"
+                formControlName="password1"
                 ngModel
                 />
         </div>
@@ -22,8 +22,8 @@
                 placeholder="Mot de passe" 
                 class="form-control" 
                 aria-label="password"
-                name="password"
-                formControlName="password"
+                name="password2"
+                formControlName="password2"
                 ngModel
                 />
         </div>
@@ -31,9 +31,8 @@
             <button type="submit" class="btn btn-primary">Connectez-vous</button>   
         </div>
         <div class="text-center mt-3">
-            <p>pas encore inscrit?<br>
-                <a routerLink="/" class="link-info">Iscrivez-vous</a>&nbsp;
-                <a routerLink="/reset" class="link-info"> mot de passe oublié</a>
+            <p>retour connexion?<br>
+                <a routerLink="/connexion" class="link-info">retour connexion</a>
             </p>
         </div>
         
@@ -41,5 +40,3 @@
 
     
 </div>
-
-
