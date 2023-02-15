@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Destination } from 'src/app/services/destination.service';
 
 @Component({
   selector: 'app-seach',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./seach.component.scss']
 })
 export class SeachComponent {
+  currentSearch = '';
+  travels: Destination[] = [];
+
+  submitForm() {
+    
+  }
 
 }
+
+

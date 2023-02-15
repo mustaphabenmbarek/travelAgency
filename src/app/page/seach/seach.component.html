@@ -1,1 +1,29 @@
-
+<form (ngSubmit)="submitForm()">
+    <div>
+      <label for="destination">Destination:</label>
+      <input type="text" id="destination" name="destination" [(ngModel)]="currentSearch" required>
+    </div>
+  
+<!--     <div>
+      <label for="arrivalDate">arrivalDate:</label>
+      <input type="text" id="arrivalDate" name="arrivalDate" [(ngModel)]="currentSearch" required>
+    </div> 
+  
+     <div>
+      <label for="dateDeparture">dateDeparture:</label>
+      <input type="text" id="dateDeparture" name="dateDeparture" [(ngModel)]="currentSearch" required>
+    </div> -->
+  
+    <div>
+      <label for="Travels">Travels:</label>
+      <select id="travels" name="travels" [(ngModel)]="travels" required>
+        <option value="">--Choisissez un voyage--</option>
+        <option value="travels1">Travel  1</option>
+        <option value="travels2">Travel  2</option>
+        <option value="travels3">Travels 3</option>
+      </select>
+    </div>
+  
+    <button type="submit">Recherche</button>
+  </form>
+  

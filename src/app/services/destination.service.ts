@@ -1,5 +1,11 @@
 import { Injectable } from '@angular/core';
-import { Destination } from '../page/destination/destination.component';
+
+export interface Destination {
+  name: string;
+  //arrivalDate: Date;
+  //dateDeparture: Date;
+  maxAcceptedTravelers: number
+}
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +19,6 @@ export class DestinationService {
     this.destinations.push({
       name,
       maxAcceptedTravelers: 2
-
     });
   
   }

@@ -1,12 +1,5 @@
 import { Component } from '@angular/core';
-import { DestinationService } from 'src/app/services/destination.service';
-
-export interface Destination {
-  name: string;
-  //arrivalDate: Date;
-  //dateDeparture: Date;
-  maxAcceptedTravelers: number
-}
+import { Destination, DestinationService } from 'src/app/services/destination.service';
 
 @Component({
   selector: 'app-destination',
@@ -15,7 +8,7 @@ export interface Destination {
 })
 export class DestinationComponent {
 
-  currentSearch = '';
+  newDestinationName= '';
   destinations: Destination[] = this.destinationService.destinations;
 
   constructor (private destinationService: DestinationService ){
@@ -23,7 +16,7 @@ export class DestinationComponent {
   }
  
   onAddTravelClick() {
-    this.destinationService.addTravel(this.currentSearch);
+    this.destinationService.addTravel(this.newDestinationName);
 
   }
 }
