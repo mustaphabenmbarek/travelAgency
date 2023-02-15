@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { InscriptionComponent } from './pages/inscription/inscription.component';
 import { ConnexionComponent } from './pages/connexion/connexion.component';
+import { FormsModule } from '@angular/forms';
+// import { HttpClientModules } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { ConnexionComponent } from './pages/connexion/connexion.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    FormsModule, 
+    // HttpClientModules
   ],
   providers: [],
   bootstrap: [AppComponent]

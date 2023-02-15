@@ -1,46 +1,54 @@
 <div class="container">
-  <h1>Inscription</h1>
+  <h1>INSCRIPTION</h1>
 
   <form class="col-4">
     <div class="mb-3">
-      <label for="firstname" class="form-label">Prénom</label>
+      <label for="firstnameInput" class="form-label">Prénom</label>
       <input
         id="firstnameInput"
         type="text"
         class="form-control"
         placeholder="Prénom"
         aria-label="firstname"
+        ngModel
+        name="firstname"
       />
     </div>
     <div class="mb-3">
-      <label for="lastname" class="form-label">Nom</label>
+      <label for="lastnameInput" class="form-label">Nom</label>
       <input
         id="lastnameInput"
         type="text"
         class="form-control"
         placeholder="Nom"
         aria-label="lastname"
+        ngModel
+        name="lastname"
       />
     </div>
     <div class="mb-3">
-      <label for="email" class="form-label">Email</label>
+      <label for="emailInput" class="form-label">Email</label>
       <input
         id="emailInput"
         type="email"
         class="form-control"
-        placeholder="email"
+        placeholder="monemail@domaine.com"
         aria-label="email"
+        ngModel
+        name="email"
       />
     </div>
 
     <div class="mb-3">
-      <label for="password" class="form-label">Mot de passe</label>
+      <label for="passwordInput" class="form-label">Mot de passe</label>
       <input
         id="passwordInput"
         type="password"
         class="form-control"
         placeholder="mot de passe"
         aria-label="password"
+        ngModel
+        name="password"
       />
     </div>
     <div class="mb-3" class="text-center">

@@ -1,13 +1,29 @@
 <div class="container">
     <h1>CONNEXION</h1>
-    <form class="col-4">
+    <form class="col-4" >
         <div class="mb-3">
-            <label for="email" class="form-label">email</label>
-            <input type="email" id="emailInput" placeholder="email" class="form-control" aria-label="email"/>
+            <label for="emailInput" class="form-label">email</label>
+            <input 
+                type="email" 
+                id="emailInput" 
+                placeholder="monemail@domaine.com " 
+                class="form-control" 
+                aria-label="email"
+                name="email"
+                ngModel
+                />
         </div>
         <div class="mb-3">
-            <label for="password" class="form-label">Mot de passe</label>
-            <input type="password" id="passwordInput"  placeholder="Mot de passe" class="form-control" aria-label="password"/>
+            <label for="passwordInput" class="form-label">Mot de passe</label>
+            <input 
+                type="password" 
+                id="passwordInput"  
+                placeholder="Mot de passe" 
+                class="form-control" 
+                aria-label="password"
+                name="password"
+                ngModel
+                />
         </div>
         <div class="mb-3" class="text-center">
             <button type="submit" class="btn btn-primary">Connectez-vous</button>   
