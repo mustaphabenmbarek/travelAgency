@@ -1,12 +1,13 @@
 <div class="container">
     <h1>CONNEXION</h1>
-    <form class="col-4" >
+    <form class="col-4" [formGroup]="connexionForm" (ngSubmit)="onSubmit()">
         <div class="mb-3">
             <label for="emailInput" class="form-label">email</label>
             <input 
                 type="email" 
                 id="emailInput" 
                 placeholder="monemail@domaine.com " 
+                formControlName="email"
                 class="form-control" 
                 aria-label="email"
                 name="email"
@@ -16,21 +17,23 @@
         <div class="mb-3">
             <label for="passwordInput" class="form-label">Mot de passe</label>
             <input 
-                type="password" 
+                type="password"
                 id="passwordInput"  
                 placeholder="Mot de passe" 
+                formControlName="password"
                 class="form-control" 
                 aria-label="password"
                 name="password"
                 ngModel
                 />
-        </div>
+                <div class="invalid-feedback" *ngIf="connexionForm.get('password')?.touched && connexionForm.get('password')?.invalid"></div>
+        </div>  le mot de passe ne peut etre vide
         <div class="mb-3" class="text-center">
             <button type="submit" class="btn btn-primary">Connectez-vous</button>   
         </div>
         <div class="text-center mt-3">
             <p>pas encore inscrit?
-                <a routerLink="/" class="link-info">Iscrivez-vous</a>
+                <a routerLink="/" class="link-info">Inscrivez-vous</a>
             </p>
         </div>
         

@@ -1,12 +1,13 @@
 <div class="container">
   <h1>INSCRIPTION</h1>
 
-  <form class="col-4">
+  <form class="col-4" [formGroup]="inscriptionForm" (ngSubmit)="onSubmit()">
     <div class="mb-3">
-      <label for="firstnameInput" class="form-label">Prénom</label>
+      <label for="firstnameInput"  class="form-label">Prénom</label>
       <input
         id="firstnameInput"
         type="text"
+        formControlName="firstname"
         class="form-control"
         placeholder="Prénom"
         aria-label="firstname"
@@ -19,6 +20,7 @@
       <input
         id="lastnameInput"
         type="text"
+        formControlName="lastname"
         class="form-control"
         placeholder="Nom"
         aria-label="lastname"
@@ -31,6 +33,7 @@
       <input
         id="emailInput"
         type="email"
+        formControlName="email"
         class="form-control"
         placeholder="monemail@domaine.com"
         aria-label="email"
@@ -44,6 +47,7 @@
       <input
         id="passwordInput"
         type="password"
+        formControlName="password"
         class="form-control"
         placeholder="mot de passe"
         aria-label="password"
