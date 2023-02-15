@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { Destination } from 'src/app/services/destination.service';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+
 
 @Component({
   selector: 'app-seach',
@@ -7,12 +8,27 @@ import { Destination } from 'src/app/services/destination.service';
   styleUrls: ['./seach.component.scss']
 })
 export class SeachComponent {
-  currentSearch = '';
-  travels: Destination[] = [];
+  destinationForm: FormGroup;
 
-  submitForm() {
-    
+ constructor() {
+  this.destinationForm = new FormGroup({
+    destination: new FormControl(null, [Validators.required]),
+
+  });
+ }
+  onSubmit() {
+    console.log(this.destinationForm);
   }
+
+  get destination() {
+    return this.destinationForm.get('destination') as FormControl;
+  }
+  // currentSearch = '';
+  // travels: Destination[] = [];
+
+  // submitForm() {
+
+  // }
 
 }
 

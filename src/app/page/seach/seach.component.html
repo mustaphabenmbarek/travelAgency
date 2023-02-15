@@ -1,10 +1,29 @@
-<form (ngSubmit)="submitForm()">
-    <div>
+
+<div class="container mt-4">
+
+  <h1>Trouvez votre Destination</h1>
+
+</div>
+
+<div class="row mb-4">
+<form [formGroup]="destinationForm" (ngSubmit)="onSubmit()">
+  <div class="row mb-4">
+    <div class="col-9">
+        <div>
       <label for="destination">Destination:</label>
-      <input type="text" id="destination" name="destination" [(ngModel)]="currentSearch" required>
+      <input type="text" class="form-control" id="destination" formControlName="destination">
+      <div class="invalid-feeback" *ngIf="destination.touched && destination.invalid && destination.errors">
+        <ng-container *ngIf="destination.errors['required']">
+          Merci de saisir la destination 
+        </ng-container>
+        <ng-container *ngIf="destination.errors['destination']">
+          La destination doit etre valide
+        </ng-container>
+        </div>
+      </div>
     </div>
-  
-<!--     <div>
+  </div> 
+  <!--     <div>
       <label for="arrivalDate">arrivalDate:</label>
       <input type="text" id="arrivalDate" name="arrivalDate" [(ngModel)]="currentSearch" required>
     </div> 
@@ -14,16 +33,22 @@
       <input type="text" id="dateDeparture" name="dateDeparture" [(ngModel)]="currentSearch" required>
     </div> -->
   
-    <div>
-      <label for="Travels">Travels:</label>
-      <select id="travels" name="travels" [(ngModel)]="travels" required>
-        <option value="">--Choisissez un voyage--</option>
-        <option value="travels1">Travel  1</option>
-        <option value="travels2">Travel  2</option>
-        <option value="travels3">Travels 3</option>
-      </select>
+<!--     <div>
+      <div class="row mb-4">
+        <div class="col-9">
+          <label for="Travels">Travels:</label>
+            <select id="travels" class="form-control" name="travels" [(ngModel)]="travels" required>
+              <option value="">--Choisissez un voyage--</option>
+              <option value="travels1">Travel  1</option>
+              <option value="travels2">Travel  2</option>
+              <option value="travels3">Travels 3</option>
+            </select>
+        </div>
+      </div>
+    </div> -->
+    <div class="col-9">
+    <button class="btn btn-primary" type="submit">Recherche</button>
     </div>
-  
-    <button type="submit">Recherche</button>
   </form>
+
   
